@@ -1,0 +1,54 @@
+{
+  "name": "example-lib",
+  "version": "0.0.1",
+  "description": "Create a component library Vite.js tooling. Prettier code formatter.",
+  "scripts": {
+    "build": "npm run build.lib && npm run build.types",
+    "build.client": "vite build",
+    "build.lib": "vite build --mode lib",
+    "build.ssr": "vite build --ssr src/entry.ssr.tsx",
+    "build.types": "tsc --emitDeclarationOnly",
+    "dev": "vite",
+    "dev.debug": "node --inspect-brk node_modules/vite/bin/vite.js --mode ssr",
+    "dev.ssr": "node --inspect node_modules/vite/bin/vite.js --mode ssr",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check .",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "release": "np",
+    "start": "npm run dev",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "0.0.34",
+    "@types/eslint": "8.4.2",
+    "@types/node": "latest",
+    "@typescript-eslint/eslint-plugin": "5.27.0",
+    "@typescript-eslint/parser": "5.27.0",
+    "eslint": "8.16.0",
+    "eslint-plugin-qwik": "0.0.34",
+    "node-fetch": "2.6.7",
+    "np": "7.6.1",
+    "prettier": "2.6.2",
+    "typescript": "4.7.2",
+    "vite": "2.9.9"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "exports": {
+    ".": {
+      "import": "./lib/index.es.qwik.js",
+      "require": "./lib/index.cjs.qwik.js"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://qwik.builder.io/",
+  "license": "",
+  "main": "./lib/index.cjs.qwik.js",
+  "module": "./lib/index.es.qwik.js",
+  "private": false,
+  "qwik": "./lib/index.es.qwik.js",
+  "types": "./lib/types/index.d.ts"
+}
