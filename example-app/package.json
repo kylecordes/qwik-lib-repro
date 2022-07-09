@@ -35,5 +35,8 @@
   },
   "homepage": "https://qwik.builder.io/",
   "license": "",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "example-lib": "file:../example-lib"
+  }
 }
