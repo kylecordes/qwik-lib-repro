@@ -9,6 +9,8 @@ npm run build
 
 cd ../example-app
 npm i
+npm uninstall example-lib
+npm i ../example-lib/
 npm run dev
 ```
 
