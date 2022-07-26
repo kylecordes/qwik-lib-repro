@@ -1,5 +1,4 @@
-import { Counter } from './components/counter/counter';
-import { Logo } from './components/logo/logo';
+import { MyComponent } from './components/my-component';
 
 export const Root = () => {
   return (
@@ -9,8 +8,7 @@ export const Root = () => {
         <title>Qwik Blank App</title>
       </head>
       <body>
-        <Logo />
-        <Counter />
+        <MyComponent />
       </body>
     </html>
   );
